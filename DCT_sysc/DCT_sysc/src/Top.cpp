@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 	// Input modifications ///////////////////////////////////////////////////////////////////////////////////////
 
 	//stripes and mask 
-	block_mask_8_512_sq(cmp_mask, 6);
+	block_mask_8_512_sq(cmp_mask, 3);
 
 	for (int n = 0; n < nblocks; n++)
 	{
@@ -98,7 +98,16 @@ int main(int argc, char* argv[])
 
 	for (int n = 0; n < nblocks; n++)
 	{
-		QnD_TATt(&image_tonal_data_csn[n * B * B]);
+		Mask(&image_tonal_data_csn[n * B * B], cmp_mask);
+	}
+
+	copy_U_F(image_tonal_data_csn, image_tonal_data_blk, 512 * 512);
+	imager_8_512_sq(image_tonal_data_blk, image_tonal_data_bss);
+	debug_outputBPM(image_tonal_data_bss, "csnt_cmp");
+
+	for (int n = 0; n < nblocks; n++)
+	{
+		QnD_TtAT(&image_tonal_data_csn[n * B * B]);
 	}
 	
 	copy_U_F(image_tonal_data_csn, image_tonal_data_blk, 512 * 512);

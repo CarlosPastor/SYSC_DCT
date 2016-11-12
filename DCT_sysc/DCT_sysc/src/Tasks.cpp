@@ -229,7 +229,7 @@ void MxC(UCHAR M1[B * B], float cns)
 
 void QnD_TATt(float A[B * B])
 {
-	BxA_F(A, T);
+	BxA_F(AxB_F(A, Tt), T);
 }
 void QnD_TtAT(float A[B * B])
 {
