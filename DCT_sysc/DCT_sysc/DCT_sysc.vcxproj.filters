@@ -18,12 +18,18 @@
     <ClInclude Include="ext\qdbmp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tasks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ext\qdbmp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Top.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tasks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

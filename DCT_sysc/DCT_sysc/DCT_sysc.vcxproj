@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ext\qdbmp.h" />
+    <ClInclude Include="src\Tasks.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ext\qdbmp.cpp" />
+    <ClCompile Include="src\Tasks.cpp" />
     <ClCompile Include="src\Top.cpp" />
   </ItemGroup>
   <ItemGroup>
